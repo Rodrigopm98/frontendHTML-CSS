@@ -1,0 +1,330 @@
+/* paleta de colores que voy a utilizar */
+:root {
+    --Amarillo: #EAC926;
+    --Azul: #03264C;
+    --Celeste: #1259c3;
+    --GrisOscuro: #666;
+    --GrisClaro: #ebebeb;
+    --Verde: #39b54a;
+}
+
+/* MODIFICADORES GENERALES (BODY) */
+/* agregue tipo de fuente y tamaño */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    background-color: #ebebeb;
+}
+
+/* -------------------------------------------------------- */
+/* MODIFICADORES DEL HEADER */
+/* color de dondo del header */
+header {
+    background-color: #EAC926;
+    padding:20px;
+}
+.logo{
+    width: 50%;
+}
+.compra-en-cuotas{
+
+    font-weight: 400;
+    text-align: center;
+}
+
+/* modificando la barra de busqueda h2 y la lupa*/
+.busqueda-y-logo{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.busqueda .espacio-buscador{
+    width: 90%;
+}
+.busqueda{
+    display: flex;
+    background-color: white;
+    border-radius: 5px;
+    color:grey;
+    font-weight: bold;
+    margin-left: 3%;
+    height: 50%;
+    box-shadow: #03264C;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+
+}
+/* ocultar barra navegacion para mobile */
+.barra_navegacion{
+    display: none;
+
+}
+.barra_navegacion ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+.barra_navegacion a{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    padding:5px;
+    font-size: 16px;
+}
+
+/* conf del icono de menu en el header */
+
+.burger-menu{
+    display: block;
+    max-width: 40px;
+    background-color: #1259c3;
+    font-size: 18px;
+    color:white;
+    text-align: center;
+    padding: 10px 0px;
+    border-radius: 8px;
+    margin:auto;
+    box-sizing: border-box;
+}
+
+    
+/* ----------------------------------------------------------- */
+/* MODIFICADORES DEL MAIN */
+/* tamaño de los titulares del main: 
+Basado en tu última vista, y Sección de Ofertas*/
+/* main del 90% */
+main {
+    margin: auto;
+    width: 90vw;
+    background-color: #ebebeb;
+    margin-bottom: 50px; 
+    box-sizing: border-box;
+}
+
+.banner{
+    width: 100vw;
+    margin-left: -5vw;
+}
+
+.titulares {
+    font-size: 24px;
+}
+.precios {
+    
+    font-size: 18px;
+    width: 30%;
+}
+.descuento{
+    font-size: 16px;
+    color:#39b54a;
+    width: 70%;
+    text-align: right;
+    
+}
+/* para ubicarlos en la misma linea */
+.precio-descuento{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.descuento{
+    align-self: center;
+
+}
+
+/* tamaño de los precios, descuentos y descripciones dentro 
+del main*/
+.producto{
+    border-top: 1px;
+    border:solid #ebebeb 1px;
+    padding: 15px;
+    line-height: 2px;
+    padding-left: 15px;
+    background-color: white;
+    margin-top:2px;
+    position: relative;
+}
+
+/* display none porque en version mobile 
+no debe aparecer la descripcion */
+.nombre_producto{
+    font-size: 16px;
+    color:Grey;
+    margin-bottom: 0%;
+    font-weight: bold;
+    display:none;
+}
+
+
+main section img {
+    width: 100%;    
+}
+.img_producto{
+    width: 100%;
+    margin-bottom: 0%;
+    background-color: white;
+}
+
+main section {
+    margin: auto;
+}
+
+/* modificador camioncito envio*/
+@keyframes giro{
+    0%{  transform: rotateZ(0deg) }
+    50%{  transform: rotateZ(-90deg) }
+    100%{  transform: rotateZ(0deg) }
+}
+.camion:hover{
+    animation: giro 1s;
+} 
+
+.camion{
+    color:#39b54a;
+    border:#39b54a solid 1.5px;
+    border-radius: 100%;
+    padding:5px;
+    text-align: center;
+    position: absolute;
+    right: 10px;
+    top: -25px;  
+} 
+
+
+
+
+
+ 
+/* ----------------------------------------------------------- */
+/* MODIFICADORES DEL FOOTER */
+/* modificadores generales */
+footer {
+    text-align: center;
+    background-color: white;
+    padding-top: 30px;
+}
+
+/* modificador de secciones */
+footer .pagos{
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 30px;
+}
+
+/* modificadores de imagenes */
+footer i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #1259c3
+}
+
+/* modificando textos de opciones de pago */
+footer h4{
+    margin-bottom: 2px;
+}
+
+
+
+/* modificador del copyright abajo */
+.marcaDeAgua {
+    text-align: left;
+    opacity: 0.5;
+ }
+
+ 
+/* MEDIA QUIRES */
+/* para tablets */
+@media(min-width:361px){
+    .nombre_producto{
+        line-height: 24px;
+        display:block;
+    }
+    .barra_navegacion{
+        display: flex;
+        justify-content: space-between;
+    }
+    .burger-menu{
+        display: none;
+    }
+    .arriba-barra-nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    .compra-en-cuotas{
+        max-width: 350px;
+        text-align: right;
+    }
+    .left-navbar, .right-navbar{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .barra_navegacion li{
+        margin: 0px 3px;
+    }
+    /* modificando el main */
+    .articulos{
+        width: 45%;
+        background-color: white;
+        margin-bottom: 10px;
+    }
+    .ultima-vista, .section-ofertas{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:space-around;
+    }
+    
+   
+}
+
+/* para compu */
+@media(min-width:769px){
+
+    .arriba-barra-nav, .barra_navegacion{
+        max-width: 1200px;
+        margin:auto;
+    }
+    .barra_navegacion li{
+        margin: 0px 6px;
+    }
+    .barra_navegacion a{
+        font-size: 20px;
+    }
+    .busqueda-y-logo{
+       width: 60%;
+    }
+    .busqueda{
+        width: 100%;
+    }
+    .busqueda p{
+        font-size: 16px;
+    }
+     /* modificando el main */
+     .articulos{
+        width: 23%;
+    }
+    .ultima-vista, .section-ofertas{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:space-around;
+    }
+
+    /* para que la descripcion se muestre solo cuando
+     paso con el mouse */
+    .nombre_producto{
+        display: none;
+    }
+    .articulos:hover .nombre_producto{
+        display: block;
+    }
+    
+    .articulos:hover{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    /* modificadores footer */
+    .orden-pagos{
+        display:flex;
+    }
+    footer i:hover{
+        color:#EAC926
+    }
+
+}
